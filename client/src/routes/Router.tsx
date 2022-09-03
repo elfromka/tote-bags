@@ -34,7 +34,7 @@ const Router = (): JSX.Element => (
 
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/cart" element={<ShoppingCart />} />
-                    <Route path="/admin/actions" element={<Dashboard />} />
+                    <Route path="/admin-actions" element={<Dashboard />} />
 
                     <Route path="*" element={<NotFound />} />
                 </Routes>

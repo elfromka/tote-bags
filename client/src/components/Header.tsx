@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
     BsJustify,
     BsX,
@@ -36,61 +36,61 @@ const Header: React.FC = (): JSX.Element => {
                     } `}
                 >
                     <li className="nav__list__item">
-                        <Link
+                        <NavLink
                             to="/about"
                             className="list-item-link"
                             onClick={handleCloseMobileMenu}
                         >
                             About
-                        </Link>
+                        </NavLink>
                     </li>
                     <li className="nav__list__item">
-                        <Link
+                        <NavLink
                             to="/faqs"
                             className="list-item-link"
                             onClick={handleCloseMobileMenu}
                         >
                             FAQs
-                        </Link>
+                        </NavLink>
                     </li>
                     <li className="nav__list__item">
-                        <Link
+                        <NavLink
                             to="/contact"
                             className="list-item-link"
                             onClick={handleCloseMobileMenu}
                         >
                             Contact
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
                 <ul className="nav__link-icons__list">
                     <li className="link-icons__list__item">
-                        <Link to="/search" className="list-item-link-icon">
+                        <NavLink to="/search" className="list-item-link-icon">
                             <BsSearch size={18} />
-                        </Link>
+                        </NavLink>
                     </li>
                     {/* <li className="link-icons__list__item">
-                        <Link to="/login" className="list-item-link-icon">
+                        <NavLink to="/login" className="list-item-link-icon">
                             <BsBoxArrowInRight />
-                        </Link>
+                        </NavLink>
                     </li> */}
                     <li className="link-icons__list__item">
-                        <Link to="/profile" className="list-item-link-icon">
+                        <NavLink to="/profile" className="list-item-link-icon">
                             <BsPersonFill size={22} />
-                        </Link>
+                        </NavLink>
                     </li>
                     {/* <li className="link-icons__list__item">
-                        <Link
+                        <NavLink
                             to="/admin/dashboard"
                             className="list-item-link-icon"
                         >
                             <BsGearWideConnected />
-                        </Link>
+                        </NavLink>
                     </li> */}
                     <li className="link-icons__list__item">
-                        <Link to="/cart" className="list-item-link-icon">
+                        <NavLink to="/cart" className="list-item-link-icon">
                             <BsBagFill size={20} />
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
             </nav>
