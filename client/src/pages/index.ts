@@ -5,8 +5,10 @@ export { default as About } from "./non-auth/About";
 export { default as Contact } from "./non-auth/Contact";
 export { default as Faqs } from "./non-auth/Faqs";
 export { default as Login } from "./non-auth/Login";
+export { default as Register } from "./non-auth/Register";
 export { default as Search } from "./non-auth/Search";
 export { default as Products } from "./non-auth/Products";
+export { default as Product } from "./non-auth/Product";
 export { default as NotFound } from "./non-auth/NotFound";
 
 // Authentication needed pages (auth folder)

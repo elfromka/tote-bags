@@ -1,14 +1,7 @@
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
+import RatingInterface from "./../ts/interfaces/RatingInterface";
 
-interface RatingPropsInterface {
-    value: number;
-    text: string;
-}
-
-const Rating: React.FC<RatingPropsInterface> = ({
-    value,
-    text,
-}): JSX.Element => {
+const Rating: React.FC<RatingInterface> = ({ value, text }): JSX.Element => {
     return (
         <div className="rating">
             <span className="rating__star">

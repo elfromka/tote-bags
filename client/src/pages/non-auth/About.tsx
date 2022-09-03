@@ -3,7 +3,7 @@
  * @return {JSX.Element} about the app.
  */
 const About: React.FC = (): JSX.Element => (
-    <div className="container">
+    <div className="about">
         <h1 className="main__title">About</h1>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.

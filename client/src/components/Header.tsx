@@ -4,8 +4,8 @@ import {
     BsJustify,
     BsX,
     BsSearch,
-    BsPersonFill,
-    // BsBoxArrowInRight,
+    // BsPersonFill,
+    BsBoxArrowInRight,
     // BsGearWideConnected,
     BsBagFill,
 } from "react-icons/bs";
@@ -69,16 +69,16 @@ const Header: React.FC = (): JSX.Element => {
                             <BsSearch size={18} />
                         </NavLink>
                     </li>
-                    {/* <li className="link-icons__list__item">
-                        <NavLink to="/login" className="list-item-link-icon">
-                            <BsBoxArrowInRight />
-                        </NavLink>
-                    </li> */}
                     <li className="link-icons__list__item">
+                        <NavLink to="/login" className="list-item-link-icon">
+                            <BsBoxArrowInRight size={22} />
+                        </NavLink>
+                    </li>
+                    {/* <li className="link-icons__list__item">
                         <NavLink to="/profile" className="list-item-link-icon">
                             <BsPersonFill size={22} />
                         </NavLink>
-                    </li>
+                    </li> */}
                     {/* <li className="link-icons__list__item">
                         <NavLink
                             to="/admin/dashboard"

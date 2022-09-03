@@ -1,6 +1,6 @@
 const Contact: React.FC = (): JSX.Element => {
     return (
-        <div className="container">
+        <div className="contact">
             <h1 className="main__title">Contact</h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.

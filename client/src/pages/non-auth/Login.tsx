@@ -1,6 +1,6 @@
 const Login: React.FC = (): JSX.Element => {
     return (
-        <div className="container">
+        <div className="login">
             <h1 className="main__title">Login</h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.

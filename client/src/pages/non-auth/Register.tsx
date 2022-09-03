@@ -1,6 +1,6 @@
 const Register: React.FC = (): JSX.Element => {
     return (
-        <div className="container">
+        <div className="register">
             <h1 className="main__title">Register</h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.

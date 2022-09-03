@@ -1,5 +1,5 @@
 const Faqs: React.FC = (): JSX.Element => (
-    <div className="container">
+    <div className="faqs">
         <h1 className="main__title">FAQs</h1>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat

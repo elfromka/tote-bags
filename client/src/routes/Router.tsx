@@ -1,19 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import Header from "../components/Header";
+import { Header, Footer } from "../components";
 import {
     About,
     Products,
+    Product,
     Contact,
     Faqs,
     Login,
+    Register,
     Search,
     NotFound,
     Profile,
     ShoppingCart,
     Dashboard,
 } from "../pages";
-import Footer from "../components/Footer";
 
 /**
  * Wrap React components in BrowserRouter from react-router-dom, add routing in the app.
@@ -26,10 +26,12 @@ const Router = (): JSX.Element => (
             <div className="container">
                 <Routes>
                     <Route path="/" element={<Products />} />
+                    <Route path="/product/:id" element={<Product />} />
                     <Route path="/search" element={<Search />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/faqs" element={<Faqs />} />
+                    <Route path="/register" element={<Register />} />
                     <Route path="/login" element={<Login />} />
 
                     <Route path="/profile" element={<Profile />} />

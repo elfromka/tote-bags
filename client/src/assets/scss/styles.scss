@@ -61,6 +61,10 @@ a {
     transition: 0.2s;
     background-color: $primaryWhite;
     z-index: 1000;
+
+    @media screen and (max-width: 768px) {
+        bottom: 0;
+    }
 }
 
 .nav {
@@ -80,16 +84,48 @@ a {
 
     &__toggler {
         display: none;
+
+        @media screen and (max-width: 768px) {
+            display: block;
+            cursor: pointer;
+        }
     }
 
     &__list {
         display: flex;
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+
+        &-active {
+            @media screen and (max-width: 768px) {
+                display: block;
+                top: -14.5rem;
+                position: absolute;
+                background: white !important;
+                width: 100%;
+                left: 0;
+                box-shadow: 0 -16px 18px -10px rgb(129 162 182 / 20%);
+                padding: 1.4rem 2rem 1rem;
+            }
+        }
+
+        &__item {
+            @media screen and (max-width: 768px) {
+                text-align: center;
+            }
+        }
 
         .list-item-link {
             font-size: 1.8rem;
             font-weight: bold;
             padding: 1rem 2rem;
             transition: all 0.2s ease;
+
+            @media screen and (max-width: 768px) {
+                display: block;
+            }
 
             &.active {
                 background-color: $primaryAccent;
@@ -123,13 +159,23 @@ a {
 
 // - main and container
 .main {
-    margin-top: 6rem;
     grid-area: content;
+    margin-top: 6rem;
     padding: 5rem;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 0;
+        padding: 2rem;
+        margin-bottom: 6rem;
+    }
 
     &__title {
         margin-top: 0;
         font-weight: bold;
+
+        @media screen and (max-width: 768px) {
+            font-size: 3.4rem;
+        }
     }
 }
 
@@ -155,11 +201,20 @@ a {
 
 // - buttons
 .btn {
+    margin: 0;
+    padding: 0;
+    border: 0;
     background-color: $primaryBlack;
     color: $primaryWhite;
-    padding: 1rem 2rem;
+    padding: 1.4rem 2.4rem;
     font-weight: bold;
     transition: all 0.2s ease;
+    cursor: pointer;
+    display: inline-flex;
+
+    &__text {
+        margin-left: 1.4rem;
+    }
 
     &:hover {
         background-color: $primaryAccent;
@@ -167,10 +222,21 @@ a {
     }
 }
 
+// - go back link
+.go-back {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 1.6rem;
+
+    &__text {
+        margin-left: 1rem;
+    }
+}
+
 // - rating
 .rating {
     margin-top: 1.4rem;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
 
@@ -228,6 +294,7 @@ a {
                 min-width: 18rem;
                 z-index: 100;
                 transition: all 0.5s ease;
+                font-weight: bold;
 
                 &__text {
                     font-size: 1.4rem;
@@ -250,6 +317,52 @@ a {
     }
 }
 
+// - Product view
+.product {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__details {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+        align-items: center;
+
+        &__image {
+            max-width: 100%;
+            margin: auto;
+        }
+    }
+
+    .related {
+        text-align: left;
+
+        &__stock-status {
+            margin: 1rem 0;
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+
+        &__price {
+            margin-bottom: 2rem;
+            font-size: 2.8rem;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: block;
+            padding: 2rem;
+            width: 100%;
+
+            @media screen and (min-width: 768px) {
+                padding: 1.4rem 2.4rem;
+                width: auto;
+            }
+        }
+    }
+}
+
 // - Not found (404)
 .not-found {
     display: flex;
@@ -263,44 +376,10 @@ a {
     }
 }
 
+// TODO: move these in their places up
 @media screen and (max-width: 768px) {
     .header,
     .footer {
         padding: 2rem;
-    }
-
-    .main {
-        padding: 5rem 2rem;
-    }
-
-    .nav {
-        &__toggler {
-            display: block;
-            cursor: pointer;
-        }
-
-        &__list {
-            display: none;
-
-            &-active {
-                display: block;
-                position: absolute;
-                top: 7.5rem;
-                background: white !important;
-                width: 100%;
-                left: 0;
-                box-shadow: 0 16px 18px -10px rgb(129 162 182 / 20%);
-                padding: 0 2rem;
-                padding-bottom: 1.4rem;
-
-                .list-item-link {
-                    display: block;
-                }
-            }
-
-            &__item {
-                text-align: center;
-            }
-        }
     }
 }

@@ -1,6 +1,6 @@
 const Search: React.FC = (): JSX.Element => {
     return (
-        <div className="container">
+        <div className="search">
             <h1 className="main__title">Search</h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
