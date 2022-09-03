@@ -12,7 +12,7 @@ export { default as NotFound } from "./non-auth/NotFound";
 // Authentication needed pages (auth folder)
 // normal user:
 export { default as Profile } from "./auth/Profile";
-export { default as ShoppingCart } from "./auth/ShoppingCart";
+export { default as ShoppingCart } from "./auth/Cart";
 
 // admin user:
 export { default as Dashboard } from "./auth/admin/Dashboard";

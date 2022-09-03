@@ -1,7 +1,7 @@
-const ShoppingCart: React.FC = (): JSX.Element => {
+const Cart: React.FC = (): JSX.Element => {
     return (
         <div className="container">
-            <h1 className="main__title">Your cart</h1>
+            <h1 className="main__title">Your bag</h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Repellat totam provident facere est excepturi, porro fuga saepe
@@ -12,4 +12,4 @@ const ShoppingCart: React.FC = (): JSX.Element => {
     );
 };
 
-export default ShoppingCart;
+export default Cart;
