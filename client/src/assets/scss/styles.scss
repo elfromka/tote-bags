@@ -1,0 +1,20 @@
+@import "/node_modules/normalize.css/normalize.css";
+@import "fonts";
+@import "variables";
+
+// General
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+// Typography
+html {
+    /* 62.5% of 16px = 10px */
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $montserratFont;
+}
