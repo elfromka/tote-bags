@@ -1,7 +1,9 @@
+// import { BsJustify } from "react-icons/bs";
 import "./assets/scss/styles.scss";
+import Router from "./routes/Router";
 
-const App = () => {
-    return <div className="App">Tote Bags store</div>;
+const App: React.FC = (): JSX.Element => {
+    return <Router />;
 };
 
 export default App;
