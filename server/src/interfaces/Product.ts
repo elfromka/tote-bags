@@ -1,3 +1,5 @@
+import { Types } from "mongoose";
+import ReviewInterface from "./Review";
 export default interface ProductInterface {
     _id: string;
     name: string;
@@ -7,4 +9,9 @@ export default interface ProductInterface {
     countInStock: number;
     rating: number;
     numReviews: number;
+}
+
+export interface ProductMongoInterface extends ProductInterface {
+    user: Types.ObjectId;
+    reviews: ReviewInterface[];
 }

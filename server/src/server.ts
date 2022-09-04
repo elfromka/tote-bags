@@ -1,6 +1,9 @@
 import express, { Request, Response } from "express";
 import { DEV_MODE, PORT } from "./config/config";
+import connectToMongoDB from "./config/db";
 import products from "./data/products";
+
+connectToMongoDB();
 
 const router = express();
 
