@@ -1,4 +1,5 @@
 import express, { Request, Response } from "express";
+import { DEV_MODE, PORT } from "./config/config";
 import products from "./data/products";
 
 const router = express();
@@ -25,6 +26,6 @@ router.get("/api/products/:id", (request: Request, response: Response) => {
     response.status(200).json(product);
 });
 
-router.listen(5000, () => {
-    console.log("Server running on port 5000");
+router.listen(PORT, () => {
+    console.log(`Server running ${DEV_MODE} on port ${PORT}`);
 });

@@ -1,11 +1,24 @@
+import axios from "axios";
+import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Rating } from "../../components";
-import products from "../../data/products";
+// import products from "../../data/products";
 import { BsChevronLeft, BsBagPlusFill } from "react-icons/bs";
+// import ProductInterface from "./../../interfaces/Product";
 
 const Product: React.FC = (): JSX.Element => {
+    const [product, setProduct] = useState<any>({});
     const { id } = useParams<string>();
-    const product = products.find((product) => product._id === id);
+
+    const fetchProduct = async () => {
+        const { data: productData } = await axios.get(`/api/products/${id}`);
+
+        setProduct(productData);
+    };
+
+    useEffect(() => {
+        fetchProduct();
+    }, []);
 
     return (
         <>

@@ -9,9 +9,7 @@ const Products: React.FC = (): JSX.Element => {
     const [products, setProducts] = useState<ProductInterface[] | []>([]);
 
     const fetchProducts = async () => {
-        const { data: productsData } = await axios.get(
-            "http://localhost:5000/api/products"
-        );
+        const { data: productsData } = await axios.get("/api/products");
 
         setProducts(productsData);
     };
