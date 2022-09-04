@@ -1,7 +1,6 @@
 import { Types } from "mongoose";
 import ReviewInterface from "./Review";
 export default interface ProductInterface {
-    _id: string;
     name: string;
     image: string;
     description: string;

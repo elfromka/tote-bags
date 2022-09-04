@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import { DEV_MODE, PORT } from "./config/config";
 import connectToMongoDB from "./config/db";
-import products from "./data/products";
+import products from "./data/seeds/products";
 
 connectToMongoDB();
 
@@ -24,9 +24,8 @@ router.get("/api/products", (request: Request, response: Response) => {
 
 // - GET one product
 router.get("/api/products/:id", (request: Request, response: Response) => {
-    const product = products.find((p) => p._id === request.params.id);
-
-    response.status(200).json(product);
+    // const product = products.find((p) => p._id === request.params.id);
+    // response.status(200).json(product);
 });
 
 router.listen(PORT, () => {
