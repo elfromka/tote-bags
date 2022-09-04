@@ -1,8 +1,7 @@
-import { ProductMongoInterface } from "./Product";
-
+import ProductInterface from "./Product";
 export default interface OrderItemInterface {
     name: string;
     quantity: number;
     image: string;
-    product: ProductMongoInterface;
+    product: ProductInterface;
 }

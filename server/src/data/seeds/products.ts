@@ -1,4 +1,12 @@
-import ProductInterface from "../../interfaces/Product";
+interface ProductInterface {
+    name: string;
+    image: string;
+    description: string;
+    price: number;
+    countInStock: number;
+    rating: number;
+    numReviews: number;
+}
 
 const products: ProductInterface[] = [
     {

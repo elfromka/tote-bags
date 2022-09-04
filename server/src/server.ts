@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 import { DEV_MODE, PORT } from "./config/config";
 import connectToMongoDB from "./config/db";
+import { notFound, errorHandler } from "./middlewares/error.middleware";
 import productRoutes from "./routes/product.routes";
 
 connectToMongoDB();
@@ -18,6 +19,12 @@ app.get("/api/ping", (request: Request, response: Response) => {
 
 // Product routes
 app.use("/api/products", productRoutes);
+
+// 404
+app.use(notFound);
+
+// Custom Error handling
+app.use(errorHandler);
 
 app.listen(PORT, () => {
     console.log(`Server running ${DEV_MODE} on port ${PORT}`);
