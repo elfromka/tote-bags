@@ -1,9 +1,25 @@
+import axios from "axios";
 import { Link } from "react-router-dom";
 import Rating from "../../components/Rating";
-import products from "../../data/products";
 import { BsFillBagPlusFill } from "react-icons/bs";
+import { useState, useEffect } from "react";
+import ProductInterface from "./../../interfaces/Product";
 
 const Products: React.FC = (): JSX.Element => {
+    const [products, setProducts] = useState<ProductInterface[] | []>([]);
+
+    const fetchProducts = async () => {
+        const { data: productsData } = await axios.get(
+            "http://localhost:5000/api/products"
+        );
+
+        setProducts(productsData);
+    };
+
+    useEffect(() => {
+        fetchProducts();
+    }, []);
+
     const addToCartDirectly = (e: any) => {
         e.preventDefault();
         console.log("STOPPED!! YAEHAAHEEEE! Now add the product to the cart!");

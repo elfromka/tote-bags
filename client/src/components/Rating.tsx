@@ -1,5 +1,5 @@
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
-import RatingInterface from "./../ts/interfaces/RatingInterface";
+import RatingInterface from "../interfaces/Rating";
 
 const Rating: React.FC<RatingInterface> = ({ value, text }): JSX.Element => {
     return (
