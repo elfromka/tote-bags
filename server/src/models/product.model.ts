@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
-import { ProductMongoInterface } from "./../interfaces/Product";
+import ProductInterface from "./../interfaces/Product";
 
-const productSchema = new Schema<ProductMongoInterface>({
+const productSchema = new Schema<ProductInterface>({
     user: {
         type: Schema.Types.ObjectId,
         required: true,
@@ -47,6 +47,6 @@ const productSchema = new Schema<ProductMongoInterface>({
     },
 });
 
-const Product = model<ProductMongoInterface>("Product", productSchema);
+const Product = model<ProductInterface>("Product", productSchema);
 
 export default Product;

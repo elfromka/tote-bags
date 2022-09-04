@@ -8,9 +8,6 @@ export default interface ProductInterface {
     countInStock: number;
     rating: number;
     numReviews: number;
-}
-
-export interface ProductMongoInterface extends ProductInterface {
     user: Types.ObjectId;
     reviews: ReviewInterface[];
 }
